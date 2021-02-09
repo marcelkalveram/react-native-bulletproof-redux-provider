@@ -32,6 +32,8 @@ $ cd ios && pod install
 import Provider from 'react-native-bulletproof-redux-provider';
 ```
 
+Now simply pass in your `initialState` and `rootReducer`:
+
 ```
 <Provider
   initialState={...}

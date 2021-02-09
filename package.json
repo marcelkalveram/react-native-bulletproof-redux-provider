@@ -1,7 +1,11 @@
 {
   "name": "react-native-bulletproof-redux-provider",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "A bulletproof Redux provider for secure encryption of your user's data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelkalveram/react-native-bulletproof-redux-provider.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +22,11 @@
   ],
   "author": "Marcel Kalveram",
   "license": "MIT",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "peerDependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "react": "17.0.1",

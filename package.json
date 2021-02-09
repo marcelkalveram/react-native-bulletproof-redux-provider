@@ -1,0 +1,42 @@
+{
+  "name": "react-native-bulletproof-redux-provider",
+  "version": "0.0.1",
+  "description": "A bulletproof Redux provider for secure encryption of your user's data",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "redux",
+    "Keychain",
+    "Keystore",
+    "AsyncStorage",
+    "encrypted",
+    "secure",
+    "storage"
+  ],
+  "author": "Marcel Kalveram",
+  "license": "MIT",
+  "peerDependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "react": "17.0.1",
+    "react-native": "^0.63.3",
+    "react-native-keychain": "^6.2.0",
+    "react-native-securerandom": "^1.0.0"
+  },
+  "dependencies": {
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-encrypt": "^3.0.1"
+  },
+  "devDependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "flow-bin": "0.122.0",
+    "react": "17.0.1",
+    "react-native": "0.63.4",
+    "react-native-keychain": "^6.2.0",
+    "react-native-securerandom": "^1.0.0"
+  }
+}

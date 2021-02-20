@@ -13,10 +13,11 @@ import type {
 const storageKey = 'persist:root';
 
 type StoreGateType = ({
-  encryptionKey: EncryptionKeyType,
-  configureStore: ConfigureStoreType,
   rootReducer: any,
   initialState: any,
+  configureStore: ConfigureStoreType,
+  encryptionKey: EncryptionKeyType,
+  encryptionErrorCb: () => void,
   children: (ConfigureStoreReturnType) => React.Node,
 }) => React.Node;
 
@@ -28,6 +29,7 @@ export const StoreGate: StoreGateType = ({
   initialState,
   configureStore,
   encryptionKey,
+  encryptionErrorCb,
   children,
 }) => {
   const [hasData, setHasData] = useState(false);
@@ -46,8 +48,12 @@ export const StoreGate: StoreGateType = ({
   // if the encryption key is fresh, we need to flush AsyncStorage,
   // because the data in there can't be encrypted without the old key
   if (encryptionKey.isFresh && hasData !== null) {
-    // store flushed, call callback
-    // clearStore();
+    AsyncStorage.clear();
+
+    // call additional custom cb
+    if (encryptionErrorCb) {
+      encryptionErrorCb();
+    }
   }
 
   return children(

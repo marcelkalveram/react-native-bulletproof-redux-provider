@@ -11,11 +11,10 @@ import {Provider} from 'react-redux';
 import type {GetEncryptionKeyType} from './types/encryptionKey';
 import type {ConfigureStoreType, Obj} from './types/configureStore';
 
-const noop = () => {};
-
 type Props = {
   getEncryptionKey?: GetEncryptionKeyType,
   configureStore?: ConfigureStoreType,
+  encryptionErrorCb?: () => void,
   rootReducer: Obj,
   initialState: Obj,
   children: React.Node,
@@ -24,6 +23,7 @@ type Props = {
 export default ({
   getEncryptionKey = getEncryptionKeyDefault,
   configureStore = configureStoreDefault,
+  encryptionErrorCb = null,
   rootReducer,
   initialState,
   children,
@@ -34,7 +34,8 @@ export default ({
         rootReducer={rootReducer}
         initialState={initialState}
         configureStore={configureStore}
-        encryptionKey={encryptionKey}>
+        encryptionKey={encryptionKey}
+        encryptionErrorCb={encryptionErrorCb}>
         {({store, persistor}) => <Provider store={store}>{children}</Provider>}
       </StoreGate>
     )}

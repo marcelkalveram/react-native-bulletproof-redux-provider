@@ -61,7 +61,7 @@ After wrapping your app inside of `Provider` you can use the usual React binding
 - [ ] Allow passing in additional transforms array to `createPersistenceConfig` function
 - [ ] Allow passing in `key` to `createPersistenceConfig` function (defaults to `root`)
 - [ ] Allow defining encryptionKey (username) to `getEncryptionKey` function (defaults to `ENCRYPTED_REDUX`)
-- [ ] Optional callback function when encryption error occurs in `StoreGate`
+- [x] Optional callback function when encryption error occurs in `StoreGate`
 - [ ] Make compatible with redux-toolkit
 
 ## License

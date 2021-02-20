@@ -6,7 +6,7 @@ Under the hood, it uses `redux-persist` and `redux-persist-transform-encrypt` fo
 
 ## Why ?
 
-By default, the local storage mechanism in React Native (AsyncStorage) is unencrypted. So we're adding a wrapper around it to make it more bullet-proof.
+By default, the local storage mechanism in React Native (AsyncStorage) is unencrypted. So we're adding a wrapper around it to make it more bulletproof.
 
 A random key is generated at runtime using `react-native-securerandom` on the user's device and permanently stored using the `react-native-keychain` module. That key is used to encrypt our Redux store, so nobody from outside can read that data.
 
@@ -37,16 +37,26 @@ Now simply pass in your `initialState` and `rootReducer`:
 ```
 <Provider
   initialState={...}
-  rootReducer={...}
->
+  rootReducer={...}>
     // your app
 </Provider>
 ```
 
-After wrapping your app inside of `Provider` you can use `connect()` or `react-redux` hooks to access the Redux store inside your components.
+After wrapping your app inside of `Provider` you can use the usual React bindings to access the store from your components.
+
+### Props
+
+| Property                       | Description                                                                         | Default value             |
+| ------------------------------ | ----------------------------------------------------------------------------------- | ------------------------- |
+| `rootReducer`                  | Redux reducer used in the store configuration                                       | none                      |
+| `initialState`                 | Initial Redux reducer state                                                         | none                      |
+| `getEncryptionKey` (optional)  | Custom encryption key method, check `types/getEncryptionKeyType` for interface      | `getEncryptionKeyDefault` |
+| `configureStore` (optional)    | Custom configureStore method, check `types/configureStore` for interface            | `configureStoreDefault`   |
+| `encryptionErrorCb` (optional) | Gets called when encryption fails, can be used to show an error message to the user | none                      |
 
 ## Todos
 
+- [ ] Unit and component tests
 - [ ] Allow passing in additional middleware array to `configureStore` function
 - [ ] Allow passing in additional transforms array to `createPersistenceConfig` function
 - [ ] Allow passing in `key` to `createPersistenceConfig` function (defaults to `root`)

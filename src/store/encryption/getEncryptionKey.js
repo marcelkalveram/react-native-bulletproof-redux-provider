@@ -33,6 +33,6 @@ export const getEncryptionKey: GetEncryptionKeyType = async () => {
     }
     throw new Error('Error setting the generic password on Keychain');
   } catch (error) {
-    throw new Error('Error retrieving generic password from Keychain');
+    throw new Error(error);
   }
 };

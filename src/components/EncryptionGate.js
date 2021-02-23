@@ -10,7 +10,7 @@ type EncryptionGateType = ({
 
 // Generates an encryption Key based on the keyGen function
 // The return value adheres to the EncryptionKeyType type, where isFresh indicates whether the key is new
-// Before the key is not generated, this component doesn't return anything (hence it's name "...Gate")
+// Before the key is not generated, this component doesn't return anything (hence its name "...Gate")
 export const EncryptionGate: EncryptionGateType = ({
   getEncryptionKey,
   children,

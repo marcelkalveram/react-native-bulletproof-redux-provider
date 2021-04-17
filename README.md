@@ -1,6 +1,6 @@
 # React Native Bulletproof Redux Provider
 
-Encrypted Redux Provider wrapper for React Native based on [AsyncStorage](@react-native-async-storage/async-storage), [react-native-keychain](https://github.com/oblador/react-native-keychain) and [react-native-securerandom](https://github.com/rh389/react-native-securerandom).
+Encrypted Redux Provider wrapper for React Native based on [AsyncStorage](https://github.com/react-native-async-storage/async-storage), [react-native-keychain](https://github.com/oblador/react-native-keychain) and [react-native-securerandom](https://github.com/rh389/react-native-securerandom).
 
 Under the hood, it uses `redux-persist` and `redux-persist-transform-encrypt` for persistence and encryption.
 

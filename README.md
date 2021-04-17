@@ -1,6 +1,6 @@
 # React Native Bulletproof Redux Provider
 
-Encrypted Redux Provider wrapper for React Native based on [AsyncStorage](@react-native-community/async-storage), [react-native-keychain](https://github.com/oblador/react-native-keychain) and [react-native-securerandom](https://github.com/rh389/react-native-securerandom).
+Encrypted Redux Provider wrapper for React Native based on [AsyncStorage](@react-native-async-storage/async-storage), [react-native-keychain](https://github.com/oblador/react-native-keychain) and [react-native-securerandom](https://github.com/rh389/react-native-securerandom).
 
 Under the hood, it uses `redux-persist` and `redux-persist-transform-encrypt` for persistence and encryption.
 
@@ -16,12 +16,12 @@ For a more extensive explanation on how this works, check out the [blog post](ht
 
 ```bash
 $ yarn add react-native-bulletproof-redux-provider
-$ yarn add @react-native-community/async-storage react-native-keychain react-native-securerandom
+$ yarn add @react-native-async-storage/async-storage react-native-keychain react-native-securerandom
 
 OR
 
 $ npm install react-native-bulletproof-redux-provider
-$ npm install @react-native-community/async-storage react-native-keychain react-native-securerandom
+$ npm install @react-native-async-storage/async-storage react-native-keychain react-native-securerandom
 
 $ cd ios && pod install
 ```

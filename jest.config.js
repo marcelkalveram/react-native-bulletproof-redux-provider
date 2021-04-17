@@ -178,7 +178,7 @@ module.exports = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    'node_modules/(?!react-native|@react-navigation|react-navigation|@react-native-community|redux-persist)',
+    'node_modules/(?!react-native|@react-navigation|react-navigation|@react-native-community|@react-native-async-storage|redux-persist)',
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them

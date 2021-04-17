@@ -28,7 +28,7 @@
     ]
   },
   "peerDependencies": {
-    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-async-storage/async-storage": "^1.15.2",
     "react": "17.0.1",
     "react-native": "^0.63.3",
     "react-native-keychain": "^6.2.0",
@@ -44,7 +44,7 @@
     "@babel/core": "^7.12.17",
     "@babel/preset-env": "^7.12.17",
     "@babel/preset-flow": "^7.12.13",
-    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-async-storage/async-storage": "^1.15.2",
     "babel-jest": "^26.6.3",
     "flow-bin": "0.122.0",
     "jest": "^26.6.3",
